@@ -32,7 +32,7 @@ eventlet.monkey_patch()
 app = flask.Flask(__name__)
 app.jinja_env.globals['data'] = data
 
-socketio = flask_socketio.SocketIO(app)
+socketio = flask_socketio.SocketIO(app, cors_allowed_origins="https://kingcloud.hopto.org:2029")
 
 # Get server IP address
 tmp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
