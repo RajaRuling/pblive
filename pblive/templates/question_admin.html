@@ -18,7 +18,7 @@
 
 {% block prompt %}
 	{% if session.questions[question_num].prompt %}
-		<p><b>{{ session.questions[question_num].prompt }}</b></p>
+		<p><b>{% autoescape false %}{{ session.questions[question_num].prompt }}{% endautoescape %}</b></p>
 	{% endif %}
 	
 	{% if session.questions[question_num].image %}
